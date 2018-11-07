@@ -1,5 +1,6 @@
 {
   "name": "michml",
+  "description": "Use MJML and Nunjucks to generate your mail HTML. Michml le MJML par Michel",
   "version": "1.0.0",
   "main": "index.ts",
   "author": "Damien Marchand",
