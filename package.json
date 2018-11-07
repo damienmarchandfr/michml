@@ -33,12 +33,19 @@
     "example:ts": "ts-node ./examples/index.ts",
     "example:ts:write": "writeHTML=true ts-node ./examples/index.ts",
     "example:js": "node ./examples/index.js",
-    "example:js:write": "writeHTML=true node ./examples/index.js"
+    "example:js:write": "writeHTML=true node ./examples/index.js",
+    "test": "mocha -r ts-node/register ./tests/**/*.test.ts --exit --reporter nyan"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/mjml": "^4.0.1",
+    "@types/mocha": "^5.2.5",
     "@types/nunjucks": "^3.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2",
     "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.1.6"
   }
 }

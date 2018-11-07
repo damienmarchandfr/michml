@@ -1,1 +1,0 @@
-{"version":3,"file":"Error.js","sourceRoot":"","sources":["../../src/Error.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;AAAA;IAAiC,+BAAK;IAAtC;;IAAwC,CAAC;IAAD,kBAAC;AAAD,CAAC,AAAzC,CAAiC,KAAK,GAAG;AAA5B,kCAAW","sourcesContent":["export class MichMLError extends Error {}\n"]}

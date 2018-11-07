@@ -7,10 +7,11 @@
     "semicolon": false,
     "arrow-parens": false,
     "trailing-comma": false,
-    "quotemark": [true, "single"],
+    "quotemark": [true],
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-unused-expression": false
+    "no-unused-expression": false,
+    "no-var-requires": false
   },
   "rulesDirectory": []
 }

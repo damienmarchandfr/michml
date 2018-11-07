@@ -1,13 +1,10 @@
 const michml = require("../dist/src/index");
-const config = require("../dist/src/Config");
 const fs = require("fs");
 
-const michel = new michml.MichML(
-  new config.MichMLConfig(__dirname + "/templates")
-);
+const michel = new michml.MichML();
 
 michel
-  .toHTMLString("template", {
+  .toHTMLString(__dirname + "/templates/template.mjml", {
     firstname: "Damien Marchand",
     job: "Web dev",
     description: "I try to create things not buggy but it's so difficult",

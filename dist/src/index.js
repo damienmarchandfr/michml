@@ -38,47 +38,40 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var nunjucks = require("nunjucks");
 var util = require("util");
-var Error_1 = require("./Error");
 var mjml = require("mjml");
 var readFile = util.promisify(fs.readFile);
 var MichML = /** @class */ (function () {
     function MichML(config) {
-        this.config = config;
+        this.config = config || {
+            beautify: false,
+            keepComments: true,
+            minify: false,
+            validationLevel: "soft"
+        };
     }
-    MichML.prototype.toHTMLString = function (fileName, data) {
+    MichML.prototype.toHTMLString = function (path, data) {
         return __awaiter(this, void 0, void 0, function () {
             var buffer;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.loadTemplate(fileName)];
+                    case 0: return [4 /*yield*/, this.loadTemplate(path)];
                     case 1:
                         buffer = _a.sent();
-                        return [2 /*return*/, mjml.default(nunjucks.renderString(buffer, data), this.config.mjml)
+                        return [2 /*return*/, mjml.default(nunjucks.renderString(buffer, data || {}), this.config)
                                 .html];
                 }
             });
         });
     };
-    MichML.prototype.loadTemplate = function (fileName) {
+    MichML.prototype.loadTemplate = function (path) {
         return __awaiter(this, void 0, void 0, function () {
-            var path, buffer, error_1, mjmlError;
+            var buffer;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        path = this.config.templatesDirectory + "/" + fileName + ".mjml";
-                        _a.label = 1;
+                    case 0: return [4 /*yield*/, readFile(path, "utf8")];
                     case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, readFile(path, "utf8")];
-                    case 2:
                         buffer = _a.sent();
                         return [2 /*return*/, buffer];
-                    case 3:
-                        error_1 = _a.sent();
-                        mjmlError = new Error_1.MichMLError("Cannot load template : " + path);
-                        mjmlError.stack = error_1.stack;
-                        throw mjmlError;
-                    case 4: return [2 /*return*/];
                 }
             });
         });

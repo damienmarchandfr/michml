@@ -1,11 +1,10 @@
 import * as fs from "fs";
 import { MichML } from "../src";
-import { MichMLConfig } from "../src/Config";
 
-const michel = new MichML(new MichMLConfig(__dirname + "/templates"));
+const michel = new MichML();
 
 michel
-  .toHTMLString("template", {
+  .toHTMLString(__dirname + "/templates/template.mjml", {
     firstname: "Damien Marchand",
     job: "Web dev",
     description: "I try to create things not buggy but it's so difficult",

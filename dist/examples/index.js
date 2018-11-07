@@ -2,10 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var src_1 = require("../src");
-var Config_1 = require("../src/Config");
-var michel = new src_1.MichML(new Config_1.MichMLConfig(__dirname + "/templates"));
+var michel = new src_1.MichML();
 michel
-    .toHTMLString("template", {
+    .toHTMLString(__dirname + "/templates/template.mjml", {
     firstname: "Damien Marchand",
     job: "Web dev",
     description: "I try to create things not buggy but it's so difficult",
@@ -14,15 +13,15 @@ michel
     skills: [
         {
             name: "JS",
-            rating: "3"
+            rating: 3
         },
         {
             name: "CSS",
-            rating: "1"
+            rating: 1
         },
         {
             name: "Node",
-            rating: "3"
+            rating: 3
         }
     ]
 })
