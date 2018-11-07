@@ -1,0 +1,24 @@
+{
+  "name": "michml",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Damien Marchand",
+  "contributors": [
+    "Jeremy Bensimon"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "mjml": "^4.2.0",
+    "nunjucks": "^3.1.3"
+  },
+  "scripts": {
+    "example": "ts-node ./examples/index.ts",
+    "example:write": "writeHTML=true ts-node ./examples/index.ts"
+  },
+  "devDependencies": {
+    "@types/mjml": "^4.0.1",
+    "@types/nunjucks": "^3.1.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
+}

@@ -1,0 +1,44 @@
+<mjml>
+  <mj-body>
+    <mj-raw>
+    </mj-raw>
+    <mj-section background-color="#f0f0f0">
+      <mj-column>
+        <mj-text font-style="italic" font-size="20px" color="#626262">{{firstname}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+    </mj-raw>
+    <mj-section background-url="https://i.stack.imgur.com/tc3b6.jpg" background-size="cover" background-repeat="no-repeat">
+      <mj-column width="400px">
+        <mj-text align="center" color="#fff" font-size="40px" font-family="Helvetica Neue">{{job}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+    </mj-raw>
+    <mj-section background-color="#fafafa">
+      <mj-column width="400px">
+        <mj-text color="#525252">{{description}}</mj-text>
+        <mj-button background-color="#F45E43" href="{{linkedin}}">Linkedin</mj-button>
+        <mj-button background-color="#F63A4D" href="{{github}}">My Github</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#fafafa">
+      <mj-column width="400px">
+        {% for skill in skills %}
+        <mj-text>
+          {{skill.name}}
+          {{skill.rating}}
+
+          {% if skill.rating > 3 %}
+          <mj-text>Cool</mj-text>
+          {% else %}
+          <mj-text>Not cool</mj-text>
+          {% endif %}
+
+        </mj-text>
+        {% endfor %}
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
