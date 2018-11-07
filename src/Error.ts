@@ -1,1 +1,1 @@
-export class MJMLTemplateError extends Error {}
+export class MichMLError extends Error {}

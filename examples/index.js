@@ -1,8 +1,10 @@
-import * as fs from "fs";
-import { MichML } from "../src";
-import { MichMLConfig } from "../src/Config";
+const michml = require("../dist/src/index");
+const config = require("../dist/src/Config");
+const fs = require("fs");
 
-const michel = new MichML(new MichMLConfig(__dirname + "/templates"));
+const michel = new michml.MichML(
+  new config.MichMLConfig(__dirname + "/templates")
+);
 
 michel
   .toHTMLString("template", {
@@ -30,7 +32,7 @@ michel
     console.log(htmlString);
     // Write in html file
     if (process.env.writeHTML) {
-      fs.writeFileSync("./index.ts.html", htmlString);
+      fs.writeFileSync("./index.js.html", htmlString);
     }
   })
   .catch(err => {

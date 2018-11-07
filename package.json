@@ -2,10 +2,26 @@
   "name": "michml",
   "description": "Use MJML and Nunjucks to generate your mail HTML. Michml le MJML par Michel",
   "version": "1.0.0",
+  "keywords": [
+    "template",
+    "email",
+    "html",
+    "mjml"
+  ],
+  "repository": {
+    "url": "https://github.com/damienmarchandfr/michml"
+  },
   "main": "index.ts",
-  "author": "Damien Marchand",
+  "author": {
+    "email": "damien-marchand@outlook.fr",
+    "name": "Damien Marchand"
+  },
   "contributors": [
-    "Jeremy Bensimon"
+    {
+      "email": "jeremy@noemi.io",
+      "name": "Jeremy Bensimon",
+      "url": "https://github.com/jeremyben"
+    }
   ],
   "license": "MIT",
   "dependencies": {
@@ -13,8 +29,11 @@
     "nunjucks": "^3.1.3"
   },
   "scripts": {
-    "example": "ts-node ./examples/index.ts",
-    "example:write": "writeHTML=true ts-node ./examples/index.ts"
+    "build": "rm -R ./dist && tsc",
+    "example:ts": "ts-node ./examples/index.ts",
+    "example:ts:write": "writeHTML=true ts-node ./examples/index.ts",
+    "example:js": "node ./examples/index.js",
+    "example:js:write": "writeHTML=true node ./examples/index.js"
   },
   "devDependencies": {
     "@types/mjml": "^4.0.1",

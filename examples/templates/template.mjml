@@ -30,7 +30,7 @@
           {{skill.name}}
           {{skill.rating}}
 
-          {% if skill.rating > 3 %}
+          {% if skill.rating >= 3 %}
           <mj-text>Cool</mj-text>
           {% else %}
           <mj-text>Not cool</mj-text>

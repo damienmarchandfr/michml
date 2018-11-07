@@ -1,4 +1,4 @@
-export class MJMLTemplateLoaderConfig {
+export class MichMLConfig {
   templatesDirectory: string;
   mjml: IMJMLConfig = {
     beautify: false,
