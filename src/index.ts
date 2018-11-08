@@ -7,7 +7,7 @@ const mjml = require("mjml");
 const readFile = util.promisify(fs.readFile);
 
 export class MichML {
-  config: MichMLConfig;
+  private config: MichMLConfig;
 
   constructor(config?: MichMLConfig) {
     this.config = config || {
