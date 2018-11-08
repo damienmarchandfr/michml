@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { MichML } from "../src";
+import { MichML } from "../index";
 
 const michel = new MichML();
 

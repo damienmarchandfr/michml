@@ -1,4 +1,4 @@
-const michml = require("../dist/src/index");
+const michml = require("../dist/index");
 const fs = require("fs");
 
 const michel = new michml.MichML();

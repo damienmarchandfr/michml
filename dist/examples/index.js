@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
-var src_1 = require("../src");
-var michel = new src_1.MichML();
+var index_1 = require("../index");
+var michel = new index_1.MichML();
 michel
     .toHTMLString(__dirname + "/templates/template.mjml", {
     firstname: "Damien Marchand",
