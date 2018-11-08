@@ -1,17 +1,15 @@
 {
-  "compilerOptions": {
-    "allowJs":false,
-    "allowUnreachableCode":false,
-    "alwaysStrict":true,
-    "baseUrl": ".",
-    "diagnostics": true,
-    "lib": ["es2015", "es2016", "es2017"],
-    "target": "es6",
-    "module": "commonjs",
+	"compilerOptions": {
     "outDir": "dist",
-    "moduleResolution": "node",
-    "strict": true,
-    "pretty": true
-  },
-  "exclude": ["node_modules","tests","examples"]
+		"rootDir": "./src",
+		"target": "es6",
+		"module": "commonjs",
+		"lib": ["es2015", "es2016", "es2017"],
+		"declaration": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"moduleResolution": "node"
+	}
 }

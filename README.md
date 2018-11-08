@@ -38,27 +38,6 @@ You can configure MJML to HTML transformation
         validationLevel: "strict" | "soft" | "skip";
     }
     const michel = new MichML(options)
-    
-
-## Examples
-
-See examples in the examples directory. 
-
-Run examples in TypeScript
-
-    // Create an index.ts.html file
-    yarn run example:ts:write
-
-    //Return an HTML string
-    yarn run example:ts
-
-Run examples in JavaScript
-
-    // Create an index.js.html file
-    yarn run example:js:write
-
-    //Return an HTML string
-    yarn run example:js
 
 ## Contributors
 
