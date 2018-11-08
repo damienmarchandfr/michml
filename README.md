@@ -4,8 +4,6 @@
 
 Create email template with [Nunjucks](https://mozilla.github.io/nunjucks/) syntax and [MJML](https://mjml.io/)
 
-**This lib is made in TypeScript but you can access JavaScript code in the /dist directory**
-
 ## Installation
 
     yarn add https://github.com/damienmarchandfr/michml#master
