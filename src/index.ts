@@ -1,10 +1,16 @@
 import * as fs from "fs";
 import * as nunjucks from "nunjucks";
 import * as util from "util";
-import { MichMLConfig } from "./Config";
 const mjml = require("mjml");
 
 const readFile = util.promisify(fs.readFile);
+
+export interface MichMLConfig {
+  beautify: boolean;
+  keepComments: boolean;
+  minify: boolean;
+  validationLevel: "strict" | "soft" | "skip";
+}
 
 export class MichML {
   private config: MichMLConfig;

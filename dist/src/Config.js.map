@@ -1,1 +1,0 @@
-{"version":3,"file":"Config.js","sourceRoot":"","sources":["../../src/Config.ts"],"names":[],"mappings":"","sourcesContent":["export interface MichMLConfig {\n  beautify: boolean;\n  keepComments: boolean;\n  minify: boolean;\n  validationLevel: \"strict\" | \"soft\" | \"skip\";\n}\n"]}
