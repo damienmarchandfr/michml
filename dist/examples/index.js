@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
-var index_1 = require("../index");
-var michel = new index_1.MichML();
+const fs = require("fs");
+const index_1 = require("../index");
+const michel = new index_1.MichML();
 michel
     .toHTMLString(__dirname + "/templates/template.mjml", {
     firstname: "Damien Marchand",
@@ -25,14 +25,13 @@ michel
         }
     ]
 })
-    .then(function (htmlString) {
+    .then(htmlString => {
     console.log(htmlString);
     // Write in html file
     if (process.env.writeHTML) {
         fs.writeFileSync("./index.ts.html", htmlString);
     }
 })
-    .catch(function (err) {
+    .catch(err => {
     console.error(err);
 });
-//# sourceMappingURL=index.js.map
