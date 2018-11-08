@@ -1,4 +1,6 @@
-## MickML
+![michml](https://image.ibb.co/emwFVA/michml.png)
+
+## MichML
 
 Create email template with [Nunjucks](https://mozilla.github.io/nunjucks/) syntax and [MJML](https://mjml.io/)
 
