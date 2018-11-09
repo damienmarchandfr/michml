@@ -30,6 +30,10 @@ export class MichML {
       .html;
   }
 
+  public async mjmlToHTMLString(mjmlString: string, data?: any): Promise<string> {
+    return mjml.default(nunjucks.renderString(mjml, data || {}), this.config).html
+  }
+
   private async loadTemplate(path: string) {
     const buffer = await readFile(path, "utf8");
     return buffer;
