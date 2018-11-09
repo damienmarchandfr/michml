@@ -29,6 +29,11 @@ class MichML {
                 .html;
         });
     }
+    mjmlToHTMLString(mjmlString, data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return mjml.default(nunjucks.renderString(mjml, data || {}), this.config).html;
+        });
+    }
     loadTemplate(path) {
         return __awaiter(this, void 0, void 0, function* () {
             const buffer = yield readFile(path, "utf8");
