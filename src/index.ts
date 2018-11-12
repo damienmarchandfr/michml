@@ -1,41 +1,34 @@
-import * as fs from "fs";
-import * as nunjucks from "nunjucks";
-import * as util from "util";
-const mjml = require("mjml");
+import * as fs from 'fs'
+import * as nunjucks from 'nunjucks'
+import * as util from 'util'
+import mjml = require('mjml')
 
-const readFile = util.promisify(fs.readFile);
-
-export interface MichMLConfig {
-  beautify: boolean;
-  keepComments: boolean;
-  minify: boolean;
-  validationLevel: "strict" | "soft" | "skip";
-}
+type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never
+type MJMLOptions = ArgumentTypes<typeof mjml>[1]
 
 export class MichML {
-  private config: MichMLConfig;
+  private config: MJMLOptions
 
-  constructor(config?: MichMLConfig) {
+  constructor(config?: MJMLOptions) {
     this.config = config || {
       beautify: false,
       keepComments: true,
       minify: false,
-      validationLevel: "soft"
-    };
+      validationLevel: 'soft'
+    }
   }
 
-  public async toHTMLString(path: string, data?: any): Promise<string> {
-    const buffer = await this.loadTemplate(path);
-    return mjml.default(nunjucks.renderString(buffer, data || {}), this.config)
-      .html;
+  public async pathToHTML(path: fs.PathLike, data: any = {}): Promise<string> {
+    const readFile = util.promisify(fs.readFile)
+    const template = await readFile(path, 'utf8')
+    const mjmlWithData = nunjucks.renderString(template, data)
+
+    return mjml(mjmlWithData, this.config).html
   }
 
-  public async mjmlToHTMLString(mjmlString: string, data?: any): Promise<string> {
-    return mjml.default(nunjucks.renderString(mjml, data || {}), this.config).html
-  }
+  public stringToHTML(mjmlString: string, data: any = {}) {
+    const mjmlWithData = nunjucks.renderString(mjmlString, data)
 
-  private async loadTemplate(path: string) {
-    const buffer = await readFile(path, "utf8");
-    return buffer;
+    return mjml(mjmlWithData, this.config).html
   }
 }
