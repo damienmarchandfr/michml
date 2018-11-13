@@ -54,7 +54,7 @@ export class MichML {
   }
 
   public async mjmlToHTMLString(mjmlString: string, data?: any): Promise<string> {
-    console.warn('mjmlToHTMLString is a deprecated method replaced by  ')
+    console.warn('mjmlToHTMLString is a deprecated method replaced by stringToHTML')
     return this.stringToHTML(mjmlString, data)
   }
 }
