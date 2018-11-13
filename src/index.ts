@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as nunjucks from 'nunjucks'
 import * as util from 'util'
-import mjml = require('mjml')
+const mjml = require('mjml')
 
 export interface MichMLConfig {
   beautify: boolean;
@@ -37,7 +37,7 @@ export class MichML {
     const template = await readFile(path, 'utf8')
     const mjmlWithData = nunjucks.renderString(template, data)
 
-    return mjml(mjmlWithData, this.config).html
+    return  mjml.default(mjmlWithData, this.config).html
   }
 
   /**
@@ -48,7 +48,7 @@ export class MichML {
   public stringToHTML(mjmlString: string, data: any = {}) {
     const mjmlWithData = nunjucks.renderString(mjmlString, data)
 
-    return mjml(mjmlWithData, this.config).html
+    return  mjml.default(mjmlWithData, this.config).html
   }
 
   // ------------ Old methods --------
