@@ -3,17 +3,21 @@ import * as nunjucks from 'nunjucks'
 import * as util from 'util'
 import mjml = require('mjml')
 
-type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never
-type MJMLOptions = ArgumentTypes<typeof mjml>[1]
+export interface MichMLConfig {
+  beautify: boolean;
+  keepComments: boolean;
+  minify: boolean;
+  validationLevel: 'strict' | 'soft' | 'skip';
+}
 
 export class MichML {
-  private config: MJMLOptions
+  private config: MichMLConfig
 
   /**
    *
    * @param config MJML config
    */
-  constructor(config?: MJMLOptions) {
+  constructor(config?: MichMLConfig) {
     this.config = config || {
       beautify: false,
       keepComments: true,
