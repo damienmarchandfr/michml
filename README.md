@@ -6,9 +6,9 @@ Create email template with [Nunjucks](https://mozilla.github.io/nunjucks/) synta
 
 ## Installation
 
-    yarn add https://github.com/damienmarchandfr/michml#master
+    yarn add michml
 
-    npm install https://github.com/damienmarchandfr/michml#master
+    npm install michml
 
 ## How to use in TypeScript
 
