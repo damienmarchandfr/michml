@@ -10,6 +10,10 @@ Create email template with [Nunjucks](https://mozilla.github.io/nunjucks/) synta
 
     npm install michml
 
+## How to use
+
+You can see example in 'examples' folder.
+
 ## How to use in TypeScript
 
     const michel = new MichML();
