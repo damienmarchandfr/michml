@@ -1,7 +1,7 @@
 {
   "name": "michml",
   "description": "Use MJML and Nunjucks to generate your mail HTML. Michml le MJML par Michel",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "keywords": [
     "template",
     "email",
@@ -15,13 +15,6 @@
     "email": "damien-marchand@outlook.fr",
     "name": "Damien Marchand"
   },
-  "contributors": [
-    {
-      "email": "jeremy@noemi.io",
-      "name": "Jeremy Bensimon",
-      "url": "https://github.com/jeremyben"
-    }
-  ],
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
