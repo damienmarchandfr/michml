@@ -37,7 +37,7 @@ export class MichML {
     const template = await readFile(path, 'utf8')
     const mjmlWithData = nunjucks.renderString(template, data)
 
-    return  mjml2html(mjmlWithData, this.config)
+    return  mjml2html(mjmlWithData, this.config).html
   }
 
   /**
@@ -48,7 +48,7 @@ export class MichML {
   public stringToHTML(mjmlString: string, data: any = {}) {
     const mjmlWithData = nunjucks.renderString(mjmlString, data)
 
-    return  mjml2html(mjmlWithData, this.config)
+    return  mjml2html(mjmlWithData, this.config).html
   }
 
   // ------------ Old methods --------
