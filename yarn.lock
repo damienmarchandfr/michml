@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/mjml@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@types/mjml/-/mjml-4.0.1.tgz#749bd69aafe683a355e9910481735e4aea60f0e5"
-  integrity sha512-o6tpo+JxHAOpDHw9Ian4EEpfIxElVZjUk4ZlrZjmDXeW5ZCu7pKcXopqy1sCPMBKjxZpsUJDIUAR5RUPkVJBKA==
-
 "@types/node@^10.11.7":
   version "10.12.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.2.tgz#d77f9faa027cadad9c912cd47f4f8b07b0fb0864"
