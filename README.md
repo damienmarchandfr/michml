@@ -41,7 +41,3 @@ You can configure MJML to HTML transformation
     }
     const michel = new MichML(options)
 
-## Contributors
-
-[Jeremy Bensimon](https://github.com/jeremyben)
-
