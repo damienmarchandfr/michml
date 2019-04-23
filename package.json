@@ -27,7 +27,7 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "prepublishOnly": "yarn run build",
-    "example" : "ts-node ./examples/index.ts"
+    "example" : "ts-node ./src/examples/index.ts"
   },
   "dependencies": {
     "mjml": "^4.2.0",

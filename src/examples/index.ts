@@ -1,4 +1,4 @@
-import {MichML} from '../src/index'
+import {MichML} from '../index'
 import * as fs from 'fs'
 
 const mich = new MichML()
