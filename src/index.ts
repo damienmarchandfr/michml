@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as nunjucks from 'nunjucks'
 import * as util from 'util'
-import mjml2html from 'mjml'
+import * as mjml2html from 'mjml'
 
 export interface MichMLConfig {
   beautify: boolean;
