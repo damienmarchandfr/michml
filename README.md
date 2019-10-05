@@ -17,13 +17,13 @@ You can see example in 'examples' folder.
 ## How to use in TypeScript
 
     const michel = new MichML();
-    const html = michel.toHTMLString(__dirname + "/templates/template.mjml", { template_data } })
+    const html = michel.pathToHTML(__dirname + "/templates/template.mjml", { template_data } })
 
 ## How to use in JavaScript
 
     const michML_module = require('michml')
     const michel = new michML_module.MichML()
-    const html = michel.toHTMLString(__dirname + "/templates/template.mjml", { template_data } })
+    const html = michel.pathToHTML(__dirname + "/templates/template.mjml", { template_data } })
 
 ## Configuration    
 

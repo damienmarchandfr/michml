@@ -5,7 +5,7 @@ var MichML = require('../../dist/index')
 
 const mich = new MichML.MichML()
 
-mich.pathToHTML(__dirname+'/template.mjml')
+mich.pathToHTML(__dirname+'/template.mjml',{message : 'Hello'})
   .then((html)=>{
     console.log(html)
   })
