@@ -2,6 +2,8 @@
 
 ## MichML
 
+[![Build Status](https://travis-ci.com/damienmarchandfr/michml.svg?branch=master)](https://travis-ci.com/damienmarchandfr/michml)
+
 Create email template with [Nunjucks](https://mozilla.github.io/nunjucks/) syntax and [MJML](https://mjml.io/)
 
 ## Installation
