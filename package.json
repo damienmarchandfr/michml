@@ -1,7 +1,7 @@
 {
   "name": "michml",
   "description": "Use MJML and Nunjucks to generate your mail HTML. Michml le MJML par Michel",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "keywords": [
     "template",
     "email",
@@ -31,18 +31,18 @@
     "example": "ts-node ./src/examples/index.ts"
   },
   "dependencies": {
-    "mjml": "^4.5.1",
-    "nunjucks": "^3.2.0"
+    "mjml": "^4.6.3",
+    "nunjucks": "^3.2.1"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.11",
-    "@types/nunjucks": "^3.1.2",
-    "jest": "^24.9.0",
-    "rimraf": "^3.0.0",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.3"
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.12",
+    "@types/nunjucks": "^3.1.3",
+    "jest": "^26.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
   }
 }
